@@ -267,7 +267,6 @@ class CsvAnalyzer
 - Refactorisez en créant autant de classes que de responsabilités distinctes.
 - Vérifiez que chaque classe obtenue n'a bien qu'une seule raison de changer ; formulez cette raison en une phrase.
 
----
 
 **Exercice 2 — Niveau intermédiaire**
 
@@ -285,7 +284,6 @@ Concevez le découpage en classes/modules respectant le SRP. Pour chaque classe,
 
 Il n'est pas nécessaire d'implémenter le code complet ; un diagramme de classes textuel (ou pseudo-code) est suffisant.
 
----
 
 **Exercice 3 — Niveau avancé**
 
@@ -303,7 +301,6 @@ Votre mission :
 3. Implémentez la couche Service (`PostService`) et la couche Repository (`PostRepository`) en PHP, en vous limitant aux méthodes `findById`, `findAll`, `save` et `delete`.
 4. Expliquez comment votre découpage facilite le remplacement futur du moteur de base de données (SQLite → PostgreSQL) sans toucher à la couche Service.
 
----
 
 ## 2. Open/Closed Principle (OCP)
 
