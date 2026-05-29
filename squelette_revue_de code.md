@@ -1,5 +1,7 @@
 # Revue de code
 
+[**Une trentaine de mauvais choix à détecter**]
+
 ## Table des matières
 
 1. Bloc 1 — Clean Code & Code smells

@@ -120,20 +120,25 @@ les plus fréquentes de code difficile à lire.
 
 ```python
 # Mauvais : mélange de niveaux d'abstraction
-def process_order(order_id: int) -> None:
+def process_order(order_id: int) -> None: # docstrings
+    """
+    Traite la confirmation d'un commande
+
+    Arguments
+    ---------
+    order_id :  int n° de commande en cours
+
+    Returns
+    -------
+    None (La méthode ne retourne rien)
+    """
     # Bas niveau : SQL brut
     conn = sqlite3.connect("shop.db")
     row  = conn.execute("SELECT * FROM orders WHERE id = ?", (order_id,)).fetchone()
 
     # Haut niveau : règle métier
-    if row["status"] == "pending" and row["total"] > 0:
-        # Bas niveau : construction manuelle d'un payload JSON
-        payload = '{"order_id":' + str(order_id) + ',"event":"confirmed"}'
-        urllib.request.urlopen("https://notify.example.com", payload.encode())
-
-        # Bas niveau : mise à jour SQL
-        conn.execute("UPDATE orders SET status='confirmed' WHERE id=?", (order_id,))
-        conn.commit()
+    confirm_order(...)
+    
 ```
 
 ```python
