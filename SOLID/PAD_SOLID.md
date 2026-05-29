@@ -550,6 +550,17 @@ Formulé par Barbara Liskov (1987), ce principe impose des contraintes précises
 - **Invariants** : un sous-type doit préserver les invariants de la classe parente.
 - **Exceptions** : un sous-type ne peut pas lever de nouvelles exceptions non prévues par le contrat parent.
 
+```php
+class A {
+
+}
+
+class B {
+
+}
+
+class 
+```
 La violation la plus classique est le carré-rectangle : un `Square` qui hérite de `Rectangle` et redéfinit `setWidth` pour modifier aussi `setHeight` viole le LSP.
 
 ### 3.2 Exemple PHP
